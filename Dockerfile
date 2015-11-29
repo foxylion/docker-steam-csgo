@@ -35,7 +35,6 @@ RUN cd /home/steam/csgo/csgo && \
     tar zxvf /temp/sourcemod-1.7.3-git5275-linux.tar.gz && \
     unzip /temp/quake_sounds1.8.zip && \
     unzip /temp/mapchooser_extended_1.10.2.zip && \
-    mv /temp/gem_damage_report.smx addons/sourcemod/plugins && \
     rm /temp/*
 
 # Add default configuration files
