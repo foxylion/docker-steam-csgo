@@ -21,10 +21,6 @@ ENV RCON_PASSWORD mysup3rs3cr3tpassw0rd
 
 EXPOSE 27015/udp
 EXPOSE 27015
-EXPOSE 1200
-EXPOSE 27005/udp
-EXPOSE 27020/udp
-EXPOSE 26901/udp
 
 ADD ./entrypoint.sh entrypoint.sh
 

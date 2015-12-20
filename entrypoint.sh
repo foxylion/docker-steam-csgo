@@ -8,8 +8,8 @@ trap '' TERM INT HUP
 if [ -d /home/steam/htdocs ]; then
 	echo "Copying htdocs..."
 	mkdir -p /home/steam/htdocs/csgo
-	cp -fR /home/steam/css/csgo/maps /home/steam/htdocs/csgo
-	cp -fR /home/steam/css/csgo/sound /home/steam/htdocs/csgo
+	cp -fR /home/steam/csgo/csgo/maps /home/steam/htdocs/csgo
+	cp -fR /home/steam/csgo/csgo/sound /home/steam/htdocs/csgo
 fi
 
 cd csgo
