@@ -19,6 +19,7 @@ docker run -d --name csgo-server-27015 \
            -p 27015:27015 -p 27015:27015/udp -p 1200:1200 \
            -p 27005:27005/udp -p 27020:27020/udp -p 26901:26901/udp \
            -e RCON_PASSWORD=mypassword \
+           -e STEAM_ACCOUNT_TOKEN=my_token \ # Required when running a public (non LAN) server
            foxylion/steam-csgo
 ```
 
@@ -71,3 +72,17 @@ The default server.cfg can also be overriden, but you can also only override som
 ### Other configuration files
 
 Any other configuration file can also be overriden using the same method as above, you must just locate the right file in the docker container. The folder structure is the same as when you install the server locally.
+
+
+### A full configuration example
+```
+docker run --rm -it --name csgo \
+           -p 27015:27015 -p 27015:27015/udp \
+           -e RCON_PASSWORD=my-password \
+           -e STEAM_ACCOUNT_TOKEN=my-token-from-steam \
+           -v /etc/csgo/mapcycle.txt:/home/steam/csgo/csgo/cfg/mapcycle.txt \
+           -v /etc/csgo/admins_simple.ini:/home/steam/csgo/csgo/addons/sourcemod/configs/admins_simple.ini \
+           -v /etc/csgo/server.cfg:/home/steam/csgo/csgo/cfg/my-server.cfg \
+           -v /var/www/public/csgo:/home/steam/htdocs:rw \
+           foxylion/steam-csgo
+```
