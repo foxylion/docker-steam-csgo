@@ -16,8 +16,7 @@ The docker container requires some ports to be exposed, therefore a more advance
 
 ```
 docker run -d --name csgo-server-27015 \
-           -p 27015:27015 -p 27015:27015/udp -p 1200:1200 \
-           -p 27005:27005/udp -p 27020:27020/udp -p 26901:26901/udp \
+           -p 27015:27015 -p 27015:27015/udp \
            -e RCON_PASSWORD=mypassword \
            -e STEAM_ACCOUNT_TOKEN=my_token \ # Required when running a public (non LAN) server
            foxylion/steam-csgo

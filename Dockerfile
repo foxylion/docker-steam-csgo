@@ -33,7 +33,7 @@ ADD mods/ /temp
 RUN cd /home/steam/csgo/csgo && \
     tar zxvf /temp/mmsource-1.10.6-linux.tar.gz && \
     tar zxvf /temp/sourcemod-1.7.3-git5275-linux.tar.gz && \
-    unzip /temp/quake_sounds1.8.zip && \
+    unzip /temp/quake_sounds_v3.zip && \
     unzip /temp/mapchooser_extended_1.10.2.zip
 
 # Add default configuration files
