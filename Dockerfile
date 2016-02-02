@@ -23,6 +23,9 @@ ENV STEAM_ACCOUNT_TOKEN ""
 EXPOSE 27015/udp
 EXPOSE 27015
 
+RUN mkdir /home/steam/.steam
+RUN ln -s /home/steam/linux32 /home/steam/.steam/sdk32
+
 ADD ./entrypoint.sh entrypoint.sh
 
 # Add Source Mods
