@@ -7,7 +7,7 @@ The Docker image in the Docker Hub can be found [here](https://hub.docker.com/r/
 List of used plugins:
 - [metamod:source v1.10.6](http://www.metamodsource.net/downloads/)
 - [SourceMod v1.7.3-5275](http://www.sourcemod.net/downloads.php?branch=stable)
-- [Quake Sounds v1.8](https://forums.alliedmods.net/showthread.php?t=58548)
+- [Quake Sounds v3](https://forums.alliedmods.net/showthread.php?t=224316)
 - [MapChooser Extended 1.10.2](https://forums.alliedmods.net/showthread.php?t=156974)
 
 ## Start the container
