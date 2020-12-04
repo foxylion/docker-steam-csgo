@@ -3,9 +3,10 @@
 This docker image provides a preconfigured Counter-Strike Global Offensive server with several plugins.
 
 List of used plugins:
-- [metamod:source v1.10.6](http://www.metamodsource.net/downloads/)
-- [SourceMod v1.7.3-5275](http://www.sourcemod.net/downloads.php?branch=stable)
-- [Quake Sounds v3](https://forums.alliedmods.net/showthread.php?t=224316)
+
+- [metamod:source v1.11 b1143](http://www.metamodsource.net/)
+- [SourceMod v1.10 b6499](http://www.sourcemod.net/downloads.php?branch=stable)
+- [Quake Sounds v3.5](https://forums.alliedmods.net/showthread.php?t=224316)
 - [MapChooser Extended 1.10.2](https://forums.alliedmods.net/showthread.php?t=156974)
 
 ## Start the container
@@ -31,9 +32,9 @@ conntrack -D -p udp
 
 ## Available Environment Variables
 
-- ``RCON_PASSWORD`` is your personal RCON password to authenticate as the administrator
-- ``CSGO_HOSTNAME`` is your custom server name shown in the server list
-- ``CSGO_PASSWORD`` is the password a user may require to connect, can be left empty
+- `RCON_PASSWORD` is your personal RCON password to authenticate as the administrator
+- `CSGO_HOSTNAME` is your custom server name shown in the server list
+- `CSGO_PASSWORD` is the password a user may require to connect, can be left empty
 
 ## Expose you maps and sounds as a htdocs directory
 
@@ -62,6 +63,7 @@ To control the SourceMod admins on the server you can use your own admins.cfg or
 ### Modified server.cfg
 
 The default server.cfg can also be overriden, but you can also only override some specific settings, therefore use the following pattern
+
 ```
 -v /path/to/my-server.cfg:/home/steam/csgo/cstrike/cfg/my-server.cfg
 ```
@@ -70,8 +72,8 @@ The default server.cfg can also be overriden, but you can also only override som
 
 Any other configuration file can also be overriden using the same method as above, you must just locate the right file in the docker container. The folder structure is the same as when you install the server locally.
 
-
 ### A full configuration example
+
 ```
 docker run --rm -it --name csgo \
            -p 27015:27015 -p 27015:27015/udp \
