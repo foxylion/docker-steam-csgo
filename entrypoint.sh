@@ -20,4 +20,5 @@ cd csgo
                        +rcon_password "$RCON_PASSWORD" \
                        -usercon \
                        +sv_setsteamaccount "$STEAM_ACCOUNT_TOKEN" \
+                       $ADDITIONAL_ARGS \
                        +map de_dust2
