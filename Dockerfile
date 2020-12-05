@@ -27,15 +27,4 @@ RUN ln -s /home/steam/linux32 /home/steam/.steam/sdk32
 
 ADD ./entrypoint.sh entrypoint.sh
 
-# Add Source Mods
-ADD mods/ /temp
-RUN cd /home/steam/csgo/csgo && \
-    tar zxvf /temp/mmsource-1.11.0-git1143-linux.tar.gz && \
-    tar zxvf /temp/sourcemod-1.10.0-git6499-linux.tar.gz && \
-    unzip /temp/quake_sounds_v3.zip && \
-    unzip /temp/mapchooser_extended_1.10.2.zip
-
-# Add default configuration files
-ADD cfg/ /home/steam/csgo/csgo/cfg
-
 CMD ./entrypoint.sh
