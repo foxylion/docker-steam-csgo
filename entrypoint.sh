@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -ex
 trap '' TERM INT HUP
 
 if [[ ! -z "$VALIDATE_ON_STARTUP" ]]; then
@@ -14,8 +14,7 @@ if [ -d /home/steam/htdocs ]; then
 fi
 
 cd csgo
-./srcds_run -game csgo +exec server.cfg \
-                       +hostname "$CSGO_HOSTNAME" \
+./srcds_run -game csgo +hostname "$CSGO_HOSTNAME" \
                        +sv_password "$CSGO_PASSWORD" \
                        +rcon_password "$RCON_PASSWORD" \
                        -usercon \
